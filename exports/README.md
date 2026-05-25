@@ -4,7 +4,8 @@ These files are the S8 Google Earth Engine export products included directly in 
 
 | File | Source task | Description |
 |---|---|---|
-| `hualien_post_eq_ndvi.tif` | `Hualien_PostEQ_NDVI` | Post-earthquake NDVI composite |
-| `hualien_delta_ndvi.tif` | `Hualien_DeltaNDVI` | Delta-NDVI map |
+| `taroko_post_eq_ndvi.tif` | `Taroko_PostEQ_NDVI` | Xiulin / Taroko post-earthquake NDVI composite |
+| `taroko_delta_ndvi.tif` | `Taroko_DeltaNDVI` | Xiulin / Taroko Delta-NDVI map |
+| `taroko_summary.json` | local GEE summary | Main counts and area statistics |
 
 The files were also exported through GEE Drive export, but the submission package does not rely on Google Drive-only storage.

@@ -1,0 +1,29 @@
+{
+  "aoi": "Xiulin / Taroko",
+  "bbox": [
+    121.34526379253053,
+    24.046021742135874,
+    121.85149217685861,
+    24.35767637905926
+  ],
+  "s2_count": 291,
+  "s1_count": 146,
+  "change_stats": {
+    "eq_damage": {
+      "mean": 0.0025231017982349888,
+      "stdDev": 0.08356724973302701,
+      "damage_km2_delta_lt_minus_0_15": 73.67644148160616
+    },
+    "dam_change": {
+      "mean": -0.011507676627521665,
+      "stdDev": 0.07405704982611495,
+      "damage_km2_delta_lt_minus_0_15": 36.29530272154182
+    },
+    "total_change": {
+      "mean": -0.008049582678010503,
+      "stdDev": 0.06936126237687665,
+      "damage_km2_delta_lt_minus_0_15": 61.54881202933135
+    }
+  },
+  "cross_sensor_high_confidence_km2": 1.588938673828125
+}
