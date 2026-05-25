@@ -1,54 +1,54 @@
-# Week 13 Exercise — ARIA v9.0 Cloud Engine
+# 第 13 週作業 — ARIA v9.0 Cloud Engine
 
-NTU Remote Sensing & Spatial Information Analysis  
-Week 13: Google Earth Engine & Cloud-Scale Time Series
+國立臺灣大學遙測與空間資訊分析  
+第 13 週：Google Earth Engine 與雲端尺度時間序列分析
 
-## Files
+## 檔案
 
-| Path | Purpose |
+| 路徑 | 說明 |
 |---|---|
-| `notebooks/Week13_ARIA_v90_張育憲_Completed_executed.ipynb` | Main submission notebook with all cells executed and outputs embedded |
-| `notebooks/Week13_ARIA_v90_張育憲_Completed.ipynb` | Clean completed source notebook with all blanks and written answers filled |
-| `notebooks/Week13-Student-original.ipynb` | Original student exercise notebook |
-| `course_materials/Pre-lab-Week13.md` | Pre-lab checklist and concept review |
-| `course_materials/Week13-Slides.pptx` | Week 13 lecture slides |
+| `notebooks/Week13_ARIA_v90_張育憲_Completed_executed.ipynb` | 主要繳交 notebook，已執行所有 cells 並保留輸出結果 |
+| `notebooks/Week13_ARIA_v90_張育憲_Completed.ipynb` | 完成版原始 notebook，已填入所有空格與文字回答 |
+| `notebooks/Week13-Student-original.ipynb` | 課程提供的原始學生作業 notebook |
+| `course_materials/Pre-lab-Week13.md` | 課前檢查表與概念複習 |
+| `course_materials/Week13-Slides.pptx` | 第 13 週課程投影片 |
 
-## What Was Completed
+## 完成內容
 
-- S1: GEE environment initialized with project `white-gate-489512-r8`.
-- S2-S3: Sentinel-2 collection filtering, SCL masking, and NDVI calculation.
-- S4-S4b: Monthly NDVI mean/min/max time series, spread plots, and broad Hualien vs Taroko scale comparison.
-- S5: Three-phase NDVI median composites and Delta-NDVI maps.
-- S6-S7: Sentinel-1 VV time series, SAR pre/post composites, and optical-SAR high-confidence damage intersection.
-- S8: GeoTIFF export tasks submitted to Google Drive.
-- S10: Creative exploration using Wazihwei mangrove MNDWI time series.
-- S9 and written-response cells: completed in the notebook.
+- S1：初始化 GEE 環境，使用 project `white-gate-489512-r8`。
+- S2-S3：完成 Sentinel-2 影像集合篩選、SCL 遮罩與 NDVI 計算。
+- S4-S4b：建立每月 NDVI mean/min/max 時間序列、變異幅度圖，並比較花蓮與太魯閣的區域尺度差異。
+- S5：完成三個時期的 NDVI 中位數合成影像與 Delta-NDVI 變化圖。
+- S6-S7：完成 Sentinel-1 VV 時間序列、SAR 地震前後合成影像，以及光學與 SAR 交集的高信心受損區域分析。
+- S8：已將 GeoTIFF export tasks 送出至 Google Drive。
+- S10：以挖子尾紅樹林 MNDWI 時間序列完成創意延伸分析。
+- S9 與文字回答 cells：已於 notebook 中完成。
 
-## Verification
+## 驗證
 
-Executed with `jupyter nbconvert --execute`.
+已使用 `jupyter nbconvert --execute` 執行 notebook。
 
-Key outputs:
+主要輸出結果：
 
-- Sentinel-2 images: `143`
-- Sentinel-1 GRD images: `146`
-- Pre-earthquake average NDVI spread: `1.0936`
-- Post-earthquake average NDVI spread: `1.2264`
-- Cross-sensor high-confidence damage area: `0.26 km2`
-- Wazihwei MNDWI months with data: `65`
+- Sentinel-2 images：`143`
+- Sentinel-1 GRD images：`146`
+- 地震前平均 NDVI spread：`1.0936`
+- 地震後平均 NDVI spread：`1.2264`
+- 跨感測器高信心受損面積：`0.26 km2`
+- 挖子尾 MNDWI 有資料月份數：`65`
 
-GEE export tasks:
+GEE export tasks：
 
-| Task | Status |
+| Task | 狀態 |
 |---|---|
 | `Hualien_DeltaNDVI` | Completed |
 | `Hualien_PostEQ_NDVI` | Completed |
 
-The exported GeoTIFFs should appear in Google Drive under `GEE_Exports/`.
+匯出的 GeoTIFF 應位於 Google Drive 的 `GEE_Exports/` 資料夾中。
 
-## S10 Creative Exploration
+## S10 創意延伸分析
 
-Study area: Wazihwei mangrove / estuarine wetland, Bali, New Taipei.
+研究區：新北市八里挖子尾紅樹林／河口濕地。
 
 ```python
 MY_BBOX = [121.413, 25.160, 121.426, 25.171]
@@ -60,10 +60,10 @@ MY_EVENT_DATE = '2024-07-24'
 MY_EVENT_LABEL = 'Typhoon Gaemi'
 ```
 
-Note: Sentinel-2 `B11` is a 20 m SWIR band. This exercise uses `scale=100` for time-series reduction, which is appropriate for the class exercise. Do not describe the MNDWI time series as a pure 10 m native-resolution product.
+註：Sentinel-2 `B11` 為 20 m SWIR 波段。本作業在時間序列 reduction 中使用 `scale=100`，適合作為課堂作業分析尺度；不應將此 MNDWI 時間序列描述為純 10 m 原生解析度產品。
 
-## Notes
+## 備註
 
-- The original course notebook is preserved unchanged as `notebooks/Week13-Student-original.ipynb`.
-- The executed notebook is larger because it embeds map widgets and plot outputs.
-- No external LLM API or image generation API was used.
+- 課程原始 notebook 已保留為 `notebooks/Week13-Student-original.ipynb`，未進行修改。
+- 已執行版 notebook 因嵌入地圖元件與圖表輸出，檔案較大。
+- 本作業未使用外部 LLM API 或圖像生成 API。
